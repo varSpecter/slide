@@ -1,0 +1,53 @@
+
+	/*reset*/
+	*{margin:0;padding:0}
+	body,html{height:100%;}
+	ul,ol{list-style:none}
+	a{display:inline-block;color:#333;text-decoration:none}
+	
+	/* 사용자 정의 클래스 */
+	.clearfix:after{content:'';display:block;clear:both}
+	
+	/* 슬라이드 */
+	.slide-wrapper{overflow:hidden;height:100%;text-align:center;}
+	.slide-wrapper ul.slide{position:relative;height:100%;}
+	ul.slide > li{
+		position:absolute;
+		top:0;left:100%;
+		width:100%;height:100%;
+		background-repeat:no-repeat;
+		background-position:50% 50%;
+		background-size:cover;
+	}
+	ul.slide > li:first-child{left:0;background-image:url(../images/1.jpg)}
+	ul.slide > li:nth-child(2){background-image:url(../images/2.jpg)}
+	ul.slide > li:nth-child(3){background-image:url(../images/3.jpg)}
+	/* 슬라이드 다음, 이전 버튼 */
+	.slide-btn > a {
+	    position: fixed;
+	    top:50%;
+	    z-index:100;
+	    width:15px;height:25px;
+	    background:url(../images/arr.png) no-repeat 0 0;
+	    text-indent:-999em
+    }
+	.slide-btn .slide-prev {left:5%;background-position: 0 0}
+	.slide-btn .slide-next {right:5%;background-position: -45px 0}
+	/* 슬라이드 페이저*/
+	ol.pager-btn {
+		position:relative;
+		bottom:60px;
+	    z-index:999;
+	    display:inline-block;
+    }
+	ol.pager-btn > li {float:left;margin:0 8px}
+	ol.pager-btn > li > a {
+	    color: #fff;
+	    width: 13px;
+	    height: 13px;
+	    border-radius: 50%;
+	    background: #fff;
+	    text-indent:-999em
+    }
+	ol.pager-btn > li > a.on {background:#63C3B1}
+
